@@ -3,6 +3,19 @@
 在项目目录运行：
 
 ```bash
+cd /Users/xlisp/Desktop/ && git clone https://gitlab.com/ubports/porting/community-ports/android10/samsung-galaxy-s10/samsung-exynos9820
+
+cp  https://github.com/xlisp/mac-build-samsung-s10e-ubuntu Dockerfile .
+
+mkdir bd out
+
+cp deviceinfo-beyond0lte deviceinfo # or other deviceinfo-* file
+
+
+```
+
+```bash
+
 cd /Users/xlisp/Desktop/samsung-exynos9820
 docker build -t exynos9820-builder .
 ```
