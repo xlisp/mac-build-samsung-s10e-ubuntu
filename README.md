@@ -47,8 +47,14 @@ cd /work
 # 如果脚本下载了 linux-x86/clang 工具链，直接用
 # 否则你可以 export CC=clang 来用容器内的 clang
 
-# 举例：运行你原本的构建命令
-./build.sh -b bd
+## bd/downloads/kernel-samsung-exynos9820/net/netfilter/Makefile # 这个编译报错，无法解决，就注释掉了 => make[3]: *** No rule to make target 'net/netfilter/xt_TCPMSS.o', needed by 'net/netfilter/built-in.o'.  Stop.
+## 137:### ----- obj-$(CONFIG_NETFILTER_XT_TARGET_TCPMSS) += xt_TCPMSS.o
+
+
+root@0279e7dd6973:/work# ./build.sh -b bd
+
+root@0279e7dd6973:/work# ./build/prepare-fake-ota.sh out/device_beyond0lte.tar.xz ota
+
 ```
 
 编译生成的 `out/` 或 `bd/` 文件夹会直接出现在你 Mac 上的 `/Users/xlisp/Desktop/samsung-exynos9820` 下，因为 volume 已经挂载好了。
