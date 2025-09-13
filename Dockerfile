@@ -23,6 +23,7 @@ RUN apt-get update && apt-get install -y \
     llvm \
     gcc \
     g++ \
+    android-sdk-libsparse-utils \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /work
